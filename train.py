@@ -91,7 +91,7 @@ def get_model():
     x = Dense(4, activation='softmax', name='predictions')(x)
 
     # Compile
-    my_model = Model(input=input, output=x)
+    my_model = Model(inputs=input, outputs=x)
     my_model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
     return my_model
