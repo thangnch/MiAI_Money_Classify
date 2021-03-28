@@ -115,7 +115,7 @@ aug_val = ImageDataGenerator(rescale=1./255)
 vgghist=vggmodel.fit_generator(aug.flow(X_train, y_train, batch_size=64),
                                epochs=50,# steps_per_epoch=len(X_train)//64,
                                validation_data=aug.flow(X_test,y_test,
-                               batch_size=len(X_test)),
+                               batch_size=64),
                                callbacks=callbacks_list)
 
 vggmodel.save("vggmodel.h5")
